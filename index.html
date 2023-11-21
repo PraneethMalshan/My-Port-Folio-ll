@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--  ==UNICONS== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
 
@@ -14,36 +15,43 @@
     <title>My PortFolio Web ||</title>
 </head>
 <body>
+<!--<div class="conBody">-->
 <!--==Side Bar==-->
 <aside class="sidebar" id="sidebar">
     <nav class="nav">
         <div class="nav_logo">
             <a href="index.html" class="nav_logo-text ">M</a>
         </div>
+
+
         <div class="nav_menu">
             <div class="menu">
                 <ul class="nav_list">
-
                     <li class="nav_item">
                         <a href="#home" class="nav_link active-link">Home</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#about" class="nav_link">About</a>
+                        <a href="#about" style="--a:1;" class="nav_link">About</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#skills" class="nav_link">Skills</a>
+                        <a href="#skills" style="--a:2;" class="nav_link">Skills</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#work" class="nav_link">Work</a>
+                        <a href="#work" style="--a:3;" class="nav_link">Work</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#service" class="nav_link">Service</a>
+                        <a href="#service" style="--a:4;" class="nav_link">Service</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#contact" class="nav_link">Contact</a>
+                        <a href="#contact" style="--a:5;" class="nav_link">Contact</a>
                     </li>
                 </ul>
             </div>
+        </div>
+
+        <div class="toggleSwitch">
+            <i class="fa fa-sun"></i>
+            <i class="fa fa-moon"></i>
         </div>
 
         <div class="btn_share">
@@ -55,7 +63,138 @@
 
 <!--==Main==-->
 <main class="main">
+<!--====Home====-->
+    <section class="home" id="home">
+        <div class="home_container container grid">
+            <div class="home_social">
+                <span class="home_social-follow" >Follow Me</span>
+                <div class="home_social-links">
+                    <a href="https://www.facebook.com/" target="_blank" style="--b:1;" class="home_social-link">
+                        <i class="uil uil-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" style="--b:2;" class="home_social-link">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" style="--b:3;" class="home_social-link">
+                        <i class="uil uil-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+<!--            <img src="assests/img/pic1.png" alt="" class="home_img">-->
+<!--            <img src="assests/img/dpM.png" alt="" class="home_img" style="width: 200px; height: 200px">-->
+
+            <div class="home_data">
+<!--            <h1 class="home_title">Hi, I'm Malshan</h1>-->
+                <h1 class="home_title">Hi, I'm <span>Praneeth</span></h1>
+<!--                <h2>Hi, I'm <span>Praneeth</span></h2>-->
+                <h3 class="home_subtitle">UI/UX Developer</h3>
+                <p class="home_description">High level experience in web design and development knowledge, producing quality work.</p>
+                <a href="#about" class="button"><i class="uil uil-user button_icon"></i>
+                More About Me</a>
+            </div>
+            <div class="my_info">
+                <div class="info_item">
+                    <i class="uil uil-facebook-messenger info_icon"></i>
+
+                    <div>
+                        <h3 class="info_title">Messenger</h3>
+                        <span class="info_subtitle">user.fb123</span>
+
+                    </div>
+                </div>
+
+                <div class="info_item">
+                    <i class="uil uil-whatsapp info_icon"></i>
+
+                    <div>
+                        <h3 class="info_title">Whatsapp</h3>
+                        <span class="info_subtitle">0776456878</span>
+
+                    </div>
+                </div>
+
+                <div class="info_item">
+                    <i class="uil uil-envelope info_icon"></i>
+
+                    <div>
+                        <h3 class="info_title">Email</h3>
+                            <span class="info_subtitle">malshan1604@gmail.com</span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="home-image container grid">
+<!--        <div class="home_container container grid">-->
+            <div class="img-box">
+                <img src="assests/img/dpM.png" alt="">
+            </div>
+
+            <!--            ==================================-->
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <path fill="#12f7ff">
+                        <animate attributeName="d"
+                                 dur="10000ms"
+                                 repeatCount="indefinite"
+                                 values="
+                             M429,311Q440,372,394,418Q348,464,285.5,451.5Q223,439,173.5,417Q124,395,80,354Q36,313,31,248.5Q26,184,86,157Q146,130,184,91.5Q222,53,285,44.5Q348,36,387,86.5Q426,137,422,193.5Q418,250,429,311Z;
+                             M430.5,292.5Q382,335,360.5,390Q339,445,278.5,460Q218,475,181,423.5Q144,372,87,343.5Q30,315,56,258Q82,201,87.5,135Q93,69,154,37.5Q215,6,276,33Q337,60,378,101Q419,142,449,196Q479,250,430.5,292.5Z;
+                             M439.5,316.5Q457,383,405,429Q353,475,291,437Q229,399,183.5,389.5Q138,380,79,348.5Q20,317,35,254Q50,191,80,139.5Q110,88,168.5,88Q227,88,286,64.5Q345,41,397.5,81.5Q450,122,436,186Q422,250,439.5,316.5Z;
+                             M439.5,299Q403,348,366.5,386.5Q330,425,279,413.5Q228,402,184.5,388.5Q141,375,78.5,347Q16,319,48,259.5Q80,200,95.5,144.5Q111,89,163,48Q215,7,274.5,36Q334,65,372,106Q410,147,443,198.5Q476,250,439.5,299Z;
+                             M423,311.5Q442,373,397,423Q352,473,286,465.5Q220,458,178,419.5Q136,381,74.5,350.5Q13,320,32,256Q51,192,99,161.5Q147,131,181.5,73.5Q216,16,266.5,59.5Q317,103,362.5,125.5Q408,148,406,199Q404,250,423,311.5Z;
+                             M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z;
+                             M449.5,313Q446,376,388.5,402Q331,428,279.5,415.5Q228,403,159,419Q90,435,85.5,367.5Q81,300,70.5,247Q60,194,90.5,147.5Q121,101,168,54.5Q215,8,282,20.5Q349,33,376.5,92Q404,151,428.5,200.5Q453,250,449.5,313Z;
+                             M463.5,313Q446,376,392,409Q338,442,277.5,461.5Q217,481,174.5,433.5Q132,386,100.5,344.5Q69,303,72.5,251Q76,199,84.5,133.5Q93,68,155,44Q217,20,283,27Q349,34,375.5,93Q402,152,441.5,201Q481,250,463.5,313Z;
+                             M461.5,315Q453,380,389.5,398Q326,416,276.5,412Q227,408,181,395.5Q135,383,88.5,347Q42,311,42,250Q42,189,72.5,135Q103,81,160,51Q217,21,271,54Q325,87,358,123.5Q391,160,430.5,205Q470,250,461.5,315Z;
+                             M442,296.5Q395,343,358.5,375.5Q322,408,270.5,438.5Q219,469,157,448.5Q95,428,91,363Q87,298,88.5,250.5Q90,203,89,133Q88,63,152,39.5Q216,16,266.5,59.5Q317,103,358.5,128.5Q400,154,444.5,202Q489,250,442,296.5Z;
+                             M423.5,302Q412,354,374,396Q336,438,282,422Q228,406,188,387Q148,368,79.5,344Q11,320,20,252.5Q29,185,87,157Q145,129,182.5,86.5Q220,44,285.5,36Q351,28,401,74.5Q451,121,443,185.5Q435,250,423.5,302Z;
+                             M471,312Q443,374,385.5,397.5Q328,421,278,411Q228,401,178,396Q128,391,87,350.5Q46,310,73,258Q100,206,100,141.5Q100,77,157.5,41.5Q215,6,267.5,51.5Q320,97,367.5,120.5Q415,144,457,197Q499,250,471,312Z;
+                             M451.5,305.5Q422,361,378,397.5Q334,434,277.5,443.5Q221,453,169.5,427.5Q118,402,88,354Q58,306,80,256Q102,206,124.5,168.5Q147,131,183,82Q219,33,271.5,60.5Q324,88,375,112.5Q426,137,453.5,193.5Q481,250,451.5,305.5Z
+                             "
+                        ></animate>
+                    </path>
+                </svg>
+            </div>
+
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <path fill="#12f7ff">
+                        <animate attributeName="d"
+                                 dur="10000ms"
+                                 repeatCount="indefinite"
+                                 values="
+                             M429,311Q440,372,394,418Q348,464,285.5,451.5Q223,439,173.5,417Q124,395,80,354Q36,313,31,248.5Q26,184,86,157Q146,130,184,91.5Q222,53,285,44.5Q348,36,387,86.5Q426,137,422,193.5Q418,250,429,311Z;
+                             M430.5,292.5Q382,335,360.5,390Q339,445,278.5,460Q218,475,181,423.5Q144,372,87,343.5Q30,315,56,258Q82,201,87.5,135Q93,69,154,37.5Q215,6,276,33Q337,60,378,101Q419,142,449,196Q479,250,430.5,292.5Z;
+                             M439.5,316.5Q457,383,405,429Q353,475,291,437Q229,399,183.5,389.5Q138,380,79,348.5Q20,317,35,254Q50,191,80,139.5Q110,88,168.5,88Q227,88,286,64.5Q345,41,397.5,81.5Q450,122,436,186Q422,250,439.5,316.5Z;
+                             M439.5,299Q403,348,366.5,386.5Q330,425,279,413.5Q228,402,184.5,388.5Q141,375,78.5,347Q16,319,48,259.5Q80,200,95.5,144.5Q111,89,163,48Q215,7,274.5,36Q334,65,372,106Q410,147,443,198.5Q476,250,439.5,299Z;
+                             M423,311.5Q442,373,397,423Q352,473,286,465.5Q220,458,178,419.5Q136,381,74.5,350.5Q13,320,32,256Q51,192,99,161.5Q147,131,181.5,73.5Q216,16,266.5,59.5Q317,103,362.5,125.5Q408,148,406,199Q404,250,423,311.5Z;
+                             M470.5,313.5Q447,377,381,385Q315,393,268.5,418Q222,443,173.5,419Q125,395,109,345.5Q93,296,94.5,250.5Q96,205,123,170Q150,135,183,75Q216,15,269,54Q322,93,360,124Q398,155,446,202.5Q494,250,470.5,313.5Z;
+                             M449.5,313Q446,376,388.5,402Q331,428,279.5,415.5Q228,403,159,419Q90,435,85.5,367.5Q81,300,70.5,247Q60,194,90.5,147.5Q121,101,168,54.5Q215,8,282,20.5Q349,33,376.5,92Q404,151,428.5,200.5Q453,250,449.5,313Z;
+                             M463.5,313Q446,376,392,409Q338,442,277.5,461.5Q217,481,174.5,433.5Q132,386,100.5,344.5Q69,303,72.5,251Q76,199,84.5,133.5Q93,68,155,44Q217,20,283,27Q349,34,375.5,93Q402,152,441.5,201Q481,250,463.5,313Z;
+                             M461.5,315Q453,380,389.5,398Q326,416,276.5,412Q227,408,181,395.5Q135,383,88.5,347Q42,311,42,250Q42,189,72.5,135Q103,81,160,51Q217,21,271,54Q325,87,358,123.5Q391,160,430.5,205Q470,250,461.5,315Z;
+                             M442,296.5Q395,343,358.5,375.5Q322,408,270.5,438.5Q219,469,157,448.5Q95,428,91,363Q87,298,88.5,250.5Q90,203,89,133Q88,63,152,39.5Q216,16,266.5,59.5Q317,103,358.5,128.5Q400,154,444.5,202Q489,250,442,296.5Z;
+                             M423.5,302Q412,354,374,396Q336,438,282,422Q228,406,188,387Q148,368,79.5,344Q11,320,20,252.5Q29,185,87,157Q145,129,182.5,86.5Q220,44,285.5,36Q351,28,401,74.5Q451,121,443,185.5Q435,250,423.5,302Z;
+                             M471,312Q443,374,385.5,397.5Q328,421,278,411Q228,401,178,396Q128,391,87,350.5Q46,310,73,258Q100,206,100,141.5Q100,77,157.5,41.5Q215,6,267.5,51.5Q320,97,367.5,120.5Q415,144,457,197Q499,250,471,312Z;
+                             M451.5,305.5Q422,361,378,397.5Q334,434,277.5,443.5Q221,453,169.5,427.5Q118,402,88,354Q58,306,80,256Q102,206,124.5,168.5Q147,131,183,82Q219,33,271.5,60.5Q324,88,375,112.5Q426,137,453.5,193.5Q481,250,451.5,305.5Z
+                             "
+                        ></animate>
+                    </path>
+                </svg>
+            </div>
+            <!--            ==================================-->
+
+        </div>
+
+    </section>
 </main>
+
+<!--</div>-->
 
 <!--==Footer==-->
 
@@ -64,6 +203,16 @@
 <!--==Main JS==-->
     <script src="assests/js/main.js"></script>
 
+<!--====JS Code start from here====-->
+<!--Background colors change-->
+<script>
+
+    const toggleSwitch = document.querySelector('.toggleSwitch');
+    toggleSwitch.addEventListener('click', function () {
+        document.body.classList.toggle('switch');
+    });
+
+</script>
 
 </body>
 </html>

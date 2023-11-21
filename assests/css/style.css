@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lobster&family=Lora&family=Poppins:wght@300;400;500;600&display=swap');
 
 /*==========Variables css==========*/
+
+
 :root {
     /*============Colors=============*/
     --hue-color:242;
@@ -10,11 +12,20 @@
 
     --skin-color: hsl(342, 92%, 46%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
+
+    /*Background  color black and white karanakota meeka damme*/
+    /*--secondary: #fff;*/
     --text-color: hsl(var(--hue-color), 8%, 85%);
+    /*meeka thibuna back ground color black and white wenas karanna kalin*/
     --body-color: hsl(var(--hue-color), 19%, 5%);
+
     --box-color: hsl(var(--hue-color), 14%, 10%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 38%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
+
+
+   /* --secondary: #9afcef;*/
+   /* --secondary: #36454f;*/
 
     /*====ss Font and Lypography====*/
 
@@ -47,7 +58,21 @@
     /*=====Z index======*/
 ==z-fixed: 10;
 ==z-modal: 100;
+
+    /*Neon Colors*/
+    --font-neon-text-shadow:0 0 10px rgb(225, 9, 74),
+
+    0 0 20px rgba(225, 9, 74,0.3),
+    0 0 30px rgba(225, 9, 74,0.3),
+    0 0 40px rgba(225, 9, 74,0.3),
+    0 0 70px rgba(225, 9, 74,0.3),
+    0 0 80px rgba(225, 9, 74,0.3),
+    0 0 100px rgba(225, 9, 74,0.3),
+    0 0 150px rgba(225, 9, 74,0.3);
+
 }
+
+
 
 
 /*=====Responsive Typography======*/
@@ -62,12 +87,28 @@
         --normal-font-size: .75rem;
     }
 
-    /*Base==============Base==============*/
-    . {
+/*Background colors change*/
+.switch {
+ /*   --body-color: hsl(var(--hue-color), 19%, 5%);
+    --secondary: #fff;*/
+    /*--secondary : hsl(var(--hue-color), 19%, 5%);
+    --body-color: #fff;*/
+
+    --body-color: hsl(var(--hue-color), 8%, 85%);
+    --text-color: hsl(var(--hue-color), 19%, 5%);
+}
+    /*============*/
+
+
+
+    /* Base==============Base============== */
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+
     }
+
 
     html {
         scroll-behavior: smooth;
@@ -81,9 +122,11 @@
     }
 
     body {
-        background-color: var(--body-color);
-        color: var(--text-color);
+        /*background-color: var(--body-color);*//*meeka thibuna back ground color black and white wenas karanna kalin*/
+        background: var(--body-color);
+        color: var(--text-color); /*meeka thibuna back ground color black and white wenas karanna kalin*/
     }
+
 
     h1,h2,h3 {
         color: var(--title-color);
@@ -115,6 +158,20 @@
 
 /*}*/
 
+/*====LayOut====*/
+.container {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.grid {
+    display: grid;
+}
+
+/*====ReUsable CSS Classes====*/
+
 
 /*===Sider===*/
 
@@ -137,6 +194,8 @@
     background-color: var(--skin-color);
     text-align: center;
     margin: auto;
+
+    animation: topToBottom 1s ease forwards;
 }
 
 .nav_logo-text {
@@ -168,10 +227,17 @@
     height: 100%;
     line-height: 100px;
     padding: 0 1rem;
-    color: var(--title-color);
+    /*color: var(--title-color);*/
+    color: var(--text-color);
+
+    /*color: #12f7ff;*/
     font-weight: var(--font-medium);
     position: relative;
     transition: .4s;
+
+    opacity: 0;
+    animation: slideAnimate 1s ease forwards;
+    animation-delay: calc(.2s * var(--a));
 }
 
 .btn_share {
@@ -180,6 +246,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    animation: leftToRight 1.5s forwards;
 }
 
 .social_share {
@@ -204,5 +271,380 @@
     margin: auto;
 }
 
+/*======================================Home Page Start======================================*/
+/*====Main====*/
+
+.main {
+    margin-left: 100px;
+    overflow: hidden;
+}
+
+/*====Home Section====*/
+.home {
+  /*  background: url("../img/pic1.png");
+    background-size: cover;
+    !*background-position: center center;*!
+    background-position:  center;*/
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 4rem;
+
+    /*Meeka thibuna mulin*/
+    height: 100vh;
+}
+
+.home_container {
+    position: relative;
+    height: 100%;
+    align-items: center;
+}
+
+/*======================================Home SocialMedia Start======================================*/
+.home_social {
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 3.5rem;
+}
+
+.home_social-follow {
+    /*font-size: var(--normal-font-size);*/
+    font-weight: var(--font-medium);
+    position: relative;
+    /*color: var(--text-color);*/
+
+    animation: socialAnimate 1s ease forwards;
+
+}
+
+.home_social-follow::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2px;
+    background-color: var(--text-color);
+    right: -45%;
+    top: 50%;
+}
+
+.home_social-links {
+    display: inline-flex;
+    column-gap: 1rem;
+}
+
+.home_social-link {
+    /*display: inline;*/
+    font-size: 1.08rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: .4s;
+
+    opacity: 0;
+    animation: socialAnimate 1s ease forwards;
+    animation-delay: calc(.2s *  var(--b));
+}
+
+.home_social-link:hover {
+    transform: translateY(.25rem);
+    color: var(--skin-color);
+}
+/*======================================Social Media Over======================================*/
+
+/*======================================Home Image Start======================================*/
+/*.home_img {
+    display: none;
+}*/
+.home-image {
+    position: relative;
+}
+
+.img-box {
+    text-align: center;
+}
+.img-box img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    animation: topToBottom ease 5s forwards;
+ }
+
+.liquid-shape {
+    position: absolute;
+  /*  width: 100%;
+    height: 100%;*/
+    width: 150%;
+    height: 150%;
+    z-index: -1;
+    top: 10%;
+    left: -30%;
+    animation: bottomToTop ease 5s forwards;
+}
+.liquid-shape:nth-child(2) {
+    filter: blur(50px);
+}
+/*======================================Home Image Over======================================*/
 
 
+/*======================================Home Content Start======================================*/
+.home_title {
+    /*font-size: var(--biggest-font-size);*/
+    font-size: 6em;
+    font-weight: 600;
+    color: var(--text-color);
+    z-index: 1111;
+
+    animation: leftToRight 1.5s forwards;
+}
+.home_data .home_title span {
+    color: #FF2400FF;
+    font-weight: 500;
+}
+
+.home_subtitle {
+    /*font-size: var(--h2-font-size);*/
+    font-size: 3em;
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-075);
+    color: var(--text-color);
+
+    position: relative;
+    animation: neon-animation 1.5s ease-in-out infinite alternate, rightToLeft 1.5s ease forwards;
+
+}
+
+.home_description {
+    position: relative;
+    font-size: 1.5em;
+    max-width: 450px;
+    margin-bottom: var(--mb-2);
+
+
+}
+/*.home_description::before{*/
+.home_data p::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--body-color);
+    animation: showTop 2s ease forwards;
+    animation-delay: 1s;
+}
+
+
+
+.my_info {
+    display: flex;
+    column-gap: 1.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 1.8rem;
+}
+
+.info_item {
+    display: flex;
+    align-items: center;
+}
+
+.info_title,
+.info_subtitle {
+    font-size: var(--small-font-size);
+
+}
+
+.info_title {
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+}
+
+.info_icon {
+    font-size: 1.8rem;
+    color: var(--skin-color);
+    margin-right: var(--mb-0-075);
+}
+/*contact animations*/
+.my_info div:nth-child(1){
+    animation: bottomToTop 3s forwards;
+}
+.my_info div:nth-child(2){
+    animation: bottomToTop 3s forwards;
+}
+.my_info div:nth-child(3){
+    animation: bottomToTop 3s forwards;
+}
+
+/*======================================Home Content Start======================================*/
+
+
+/*=======================================Buttons================================*/
+.button {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    background-color: var(--skin-color);
+    color: var(--title-color);
+    padding: .75rem 1.4rem;
+    border-radius: .25rem;
+    font-weight: var(--font-medium);
+    position: relative;
+    z-index: 1;
+    /*transition: .4s;*/
+    animation: rightToLeft 3s forwards;
+}
+
+.button::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #343a40;
+    z-index: -1;
+    transform-origin: center;
+    transform: scale(0);
+    border-radius: .25rem;
+    transition: .3s;
+}
+
+.button:hover::after {
+    transform: scale(1);
+}
+
+.button_icon {
+    font-size: 1.25rem;
+}
+
+
+
+/*==========Background colors change=================*/
+.toggleSwitch {
+    position: relative;
+    bottom: -39rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    animation: leftToRight 2s forwards;
+}
+
+.toggleSwitch .fa {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.fa-sun {
+    display: none;
+    color: var(--text-color);
+
+}
+
+.switch .fa-sun {
+    display: block;
+}
+.switch .fa-moon {
+    display: none;
+}
+
+
+
+
+
+
+/*===============================  KEY FRAMES  ==================================*/
+@keyframes topToBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideAnimate {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*Name home_title*/
+@keyframes leftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/*h3 home_subtitle and CV Button*/
+@keyframes neon-animation {
+    from{
+        opacity: 1.0;
+        text-shadow: var(--font-neon-text-shadow);
+    }
+    to{
+        opacity: 0.6;
+        text-shadow: none;
+    }
+}
+
+/*Home Desctiption */
+@keyframes rightToLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes showTop {
+    100%{
+        width: 0;
+    }
+}
+
+/*----*/
+
+/*Social Media Animate*/
+@keyframes socialAnimate {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Contact animations and Liquid-shape*/
+@keyframes bottomToTop {
+    0%{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
