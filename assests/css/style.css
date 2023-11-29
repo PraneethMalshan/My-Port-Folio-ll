@@ -904,4 +904,106 @@
 
 
 
-/*/////==================================================/////*/
+/*-//////////////////////////////////////////////////////////////////////-*/
+/*====Skills Section====*/
+/*-//////////////////////////////////////////////////////////////////////-*/
+
+.skills_container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.skills_header:not(:last-child) {
+    /*margin-bottom: var(--mb-2-5);*/
+    margin-bottom: var(--mb-1-5);
+}
+
+.skills_icon {
+    font-size: 2rem;
+    color: var(--skin-color);
+}
+
+.skills_icon {
+    margin-right: var(--mb-0-075);
+}
+
+.skills_title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+/*Cards*/
+.cards {
+    width: 60%;
+    height: 160px;
+    /*border: 1px solid #fff;*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    /*padding-right: 30px;*/
+    overflow: auto;
+    scroll-behavior: smooth;
+    transition: 1s linear;
+}
+
+.cards::-webkit-scrollbar{
+    display: none;
+}
+
+.cards .card{
+    position: relative;
+    min-width: 125px;
+    min-height: 125px;
+    /*border: 1px solid var(--skin-color);*/
+    margin-right: 13px;
+    /*background: #282828;*/
+    border-radius: 50px 10px 50px 10px;
+
+
+}
+
+.cards .card:nth-last-child(1){
+    margin-right: 0px;
+}
+
+.dis {
+    width: 125px;
+    height: 125px;
+    position: relative;
+   /* top: 5px;
+    left: 5px;*/
+    border-radius: 50px 10px 50px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.skills_h5 {
+    position: relative;
+    color: white;
+    font-size: 16px;
+    /*font-family: SimSun;*/
+    padding: 0px 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+/*-//////////////////////////////////////////////////////////////////////-*/
+/*====Work Section====*/
+/*-//////////////////////////////////////////////////////////////////////-*/
