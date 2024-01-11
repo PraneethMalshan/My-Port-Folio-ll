@@ -66,5 +66,45 @@ function portfolioItemDetails(portfolioItem) {
     document.querySelector(".portfolio_popup-body").innerHTML = portfolioItem.querySelector(".portfolio_item-details").innerHTML;
 }*/
 
+/*==========Services Model==============================*/
+/*const modelViews = document.querySelectorAll('.services_model'),
+    modelBtns = document.querySelectorAll('.services_button'),
+    modelCloses = document.querySelectorAll('.services_model-close')
+let model = function(modelClick) {
+    modelViews[modelClick].classList.add('active-model')
+}
+
+modelBtns.forEach((modelBtn, i) => {
+    modelBtn.addEventListener('click', () => {
+        model(i)
+    })
+})
+
+modelCloses.forEach((modelClose) => {
+    modelClose.addEventListener("click", () => {
+        modelViews.forEach((modelView) => {
+            modelView.classList.remove('active-model')
+        })
+    })
+})*/
 /*==========Swiper Testimonial==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
