@@ -88,7 +88,15 @@ modelCloses.forEach((modelClose) => {
     })
 })*/
 /*==========Swiper Testimonial==============================*/
-
+/*let swiper = new Swiper(".testimonials_container", {
+    spaceBetween: 24,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});*/
 
 
 
