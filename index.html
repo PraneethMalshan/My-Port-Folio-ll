@@ -42,10 +42,13 @@
                         <a href="#education" style="--a:2;" class="nav_link">Education</a>
                     </li>
                     <li class="nav_item">
+                        <a href="#skills" style="--a:2;" class="nav_link">Skills</a>
+                    </li>
+                    <li class="nav_item">
                         <a href="#work" style="--a:3;" class="nav_link">Work</a>
                     </li>
                     <li class="nav_item">
-                        <a href="#service" style="--a:4;" class="nav_link">Service</a>
+                        <a href="#services" style="--a:4;" class="nav_link">Service</a>
                     </li>
                     <li class="nav_item">
                         <a href="#contact" style="--a:5;" class="nav_link">Contact</a>
@@ -53,6 +56,8 @@
                 </ul>
             </div>
         </div>
+
+                    <!--        -->
 
         <div class="toggleSwitch">
             <i class="fa fa-sun"></i>
@@ -765,7 +770,6 @@
         </div>
     </div>
 
-
     <!--=======Service Section=========-->
     <section class="services section" id="services">
         <h2 data-heading="Services" class="section_title">What I Offer</h2>
@@ -905,7 +909,6 @@
 
     </section>
 
-
     <!--=======Testimonials=========-->
     <section class="testimonials section">
         <h2 data-heading="My clients say" class="section_title">Testimonials</h2>
@@ -958,7 +961,6 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-
 
     <!--=======Contact==============-->
     <section class="contact section" id="contact">
@@ -1027,7 +1029,6 @@
             </div>
         </div>
     </section>
-
 
     <!--========Footer==============-->
     <footer class="footer">
@@ -1193,6 +1194,34 @@
         input.addEventListener("focus", focusFunc);
         input.addEventListener("blur", blurFunc);
     })
+
+
+/*==========Scroll Section Active Link=================*/
+    //get all sections that have an id defined
+    const sections = document.querySelectorAll("section[id]");
+
+    //Add an event listener listing for scroll
+    window.addEventListener("scroll", navHighlighter);
+    function navHighlighter() {
+
+//     get current scroll position
+        let scrollY = window.pageYOffset;
+//     Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 50,
+                sectionId =current.getAttribute("id");
+
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add("active-link")
+            } else {
+                document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove("active-link")
+            }
+
+        })
+
+    }
+
 
 
 </script>
