@@ -196,6 +196,7 @@
     height: 100vh;
     background-color: var(--body-color);
     border-right: 1px solid var(--box-color);
+    transition: .5s;
 }
 
 .nav_logo {
@@ -1484,7 +1485,7 @@ textarea.input{
     font-size: 1rem;
     font-weight: var(--font-medium);
     pointer-events: none;
-    z-index: 1000;
+    z-index: 15;
     transition: .5s;
 }
 
@@ -1502,7 +1503,8 @@ textarea.input{
     font-size: var(--small-font-size);
     padding: 0 .4rem;
     pointer-events: none;
-    z-index: 500;
+    /*z-index: 500;*/
+    z-index: var(--z-fixed);
 }
 
 .input_container span::before,

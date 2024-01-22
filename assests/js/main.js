@@ -1,5 +1,23 @@
+/*===============Show Slider================*/
+const navMenu = document.getElementById('sidebar');
+    navToggle = document.getElementById('nav_toggle');
+    navClose = document.getElementById('nav_close');
 
+/*===============Slider Show================*/
+/*Validate If Constant Exists.*/
+if (navToggle) {
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.add('show-sidebar')
+    })
+}
 
+/*===============Slider Hidden================*/
+/*Validate If Constant Exists.*/
+if (navClose) {
+    navClose.addEventListener("click", () => {
+        navMenu.classList.remove('show-sidebar')
+    })
+}
 
 /*===============SKILLS TABS================*/
 /*
