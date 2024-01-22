@@ -1864,11 +1864,111 @@ textarea.input{
     .portfolio_popup-close {
         top: .5rem;
     }
+}
 
 
+/*For medium devices*/
+@media screen and (max-width: 576px) {
+    .nav_toggle {
+        right: initial;
+        left: 1.5rem;
+    }
 
+    .home {
+        background-image: none;
+        height: initial;
+        align-items: initial;
+        padding: 7rem 0 2rem;
+    }
+
+    .home_container {
+        row-gap: 2rem;
+    }
+
+    .home-image {
+        display: block;
+        width: 250px;
+        justify-self: center;
+    }
+
+    .home_social {
+        left: initial;
+        right: -1rem;
+        flex-direction: column;
+        row-gap: 3.5rem;
+    }
+    .home_social-follow {
+        font-size: var(--smaller-font-size);
+        transform: rotate(90deg);
+    }
+
+    .home_social-links {
+        flex-direction: column;
+        row-gap: .25rem;
+    }
+
+    .home_social-link {
+        font-size: var(--normal-font-size);
+    }
+
+    .my_info {
+        display: none;
+    }
+
+    .about_info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about_description {
+        padding: 0;
+    }
+
+    .services_model-content {
+        padding: 4.5rem 1.5rem 2.5rem ;
+    }
+
+    .services_model-description {
+        padding: 0;
+    }
+
+    .contact_container,
+    .work_container {
+        grid-template-columns: 300px;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer_links {
+        justify-self: flex-start;
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
