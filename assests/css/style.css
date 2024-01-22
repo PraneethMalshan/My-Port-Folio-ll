@@ -1585,6 +1585,9 @@ textarea.input{
 .footer_social {
     font-size: 1.25rem;
     margin-right: var(--mb-1-5);
+    /*color: white;*/
+    /*color: var(--text-color);*/
+    /*color: var(--title-color);*/
 }
 
 .footer_social:hover {
@@ -1783,6 +1786,89 @@ textarea.input{
 
 }
 
+
+/*For medium devices*/
+@media screen and (max-width: 768px) {
+    .about_img {
+        width: 250px;
+    }
+
+    .qualification_container {
+        grid-template-columns: 290px;
+        row-gap: 3rem;
+    }
+
+    .skills_container {
+        grid-template-columns: 300px;
+        row-gap: 3rem;
+    }
+
+    .work_container {
+        grid-template-columns: 330px;
+    }
+
+    .services_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .services_content {
+        padding: 3.5rem .5rem 1.25rem 1.5rem;
+    }
+
+    .services_icon {
+        font-size: 1.5rem;
+    }
+
+    .contact_container {
+        grid-template-columns: 360px;
+        row-gap: 3rem;
+    }
+
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+        /*justify-items: center;*/
+    }
+
+    .footer_socials {
+        justify-self: start;
+    }
+
+    .footer_links {
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    .footer_bg {
+        padding: 2rem 0 3rem;
+    }
+
+    .footer_copy {
+        margin-top: var(--mb-3);
+    }
+
+    .portfolio_popup-inner {
+        width: 420px;
+        padding: 2.8rem 1.5rem 2.5rem;
+    }
+
+    .portfolio_popup-content {
+        grid-template-columns: 1fr;
+        row-gap: 1.6rem;
+    }
+
+    .details_title {
+        font-size: var(--normal-font-size);
+    }
+    .portfolio_popup-close {
+        top: .5rem;
+    }
+
+
+
+
+}
 
 
 
